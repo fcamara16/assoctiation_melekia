@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New NotreHistoire{% endblock %}
+
+{% block body %}
+    <h1>Create new NotreHistoire</h1>
+
+    {{ include('notre_histoire/_form.html.twig') }}
+
+    <a href="{{ path('app_notre_histoire_index') }}">back to list</a>
+{% endblock %}

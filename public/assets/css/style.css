@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+}
+.menu-bar {
+  position: static;
+  background: rgba(15, 165, 199, 0.872);
+  text-align: center;
+}
+.menu-bar ul {
+  display: inline-flex;
+  list-style: none;
+  color: #fff;
+}
+
+.menu-bar ul li {
+  width: 100%;
+  margin: 15px;
+  padding: 15px;
+}
+.menu-bar ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.accueil,
+.menu-bar ul li:hover {
+  background: #2b8dab;
+  border-radius: 3px;
+}
+
+.menu-bar .fa {
+  margin-right: 8px;
+}
+.sub-menu-1 {
+  display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 {
+  display: block;
+  position: absolute;
+  background: #2b8dab;
+  margin-top: 15px;
+  margin-left: -15px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul {
+  display: block;
+  margin: 10px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li {
+  width: 150px;
+  padding: 10px;
+  border-bottom: 1px dotted #fff;
+  background: transparent;
+  border-radius: 0;
+  text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child {
+  border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+  color: #9bc7d5;
+}
+.contact {
+  padding: 5%;
+  color: white;
+  background-color: rgba(15, 165, 199, 0.872);
+  text-align: center;
+}
+
+.container {
+  width: 400px;
+
+  height: 400px;
+}
+.actualites {
+  padding: 5rem;
+  color: white;
+  background-color: rgba(15, 165, 199, 0.872);
+}
+
+.collecte {
+  padding: 5rem;
+  color: white;
+  background-color: rgba(15, 165, 199, 0.872);
+  opacity: 0.6;
+}
+
+.aumone {
+  background-color: bisque;
+  color: black;
+  font-style: oblique;
+  height: 5%;
+  padding: 5%;
+  opacity: 15%;
+}

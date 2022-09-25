@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Maraude index{% endblock %}
+
+{% block body %}
+    <h1>Maraude index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Date</th>
+                <th>Image</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for maraude in maraudes %}
+            <tr>
+                <td>{{ maraude.id }}</td>
+                <td>{{ maraude.date ? maraude.date|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ maraude.image }}</td>
+                <td>{{ maraude.description }}</td>
+                <td>
+                    <a href="{{ path('app_maraude_show', {'id': maraude.id}) }}">show</a>
+                    <a href="{{ path('app_maraude_edit', {'id': maraude.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_maraude_new') }}">Create new</a>
+{% endblock %}

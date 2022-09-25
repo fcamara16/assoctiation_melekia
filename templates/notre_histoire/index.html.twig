@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}NotreHistoire index{% endblock %}
+
+{% block body %}
+    <h1>NotreHistoire index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Images</th>
+                <th>Texte</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for notre_histoire in notre_histoires %}
+            <tr>
+                <td>{{ notre_histoire.id }}</td>
+                <td>{{ notre_histoire.images }}</td>
+                <td>{{ notre_histoire.texte }}</td>
+                <td>
+                    <a href="{{ path('app_notre_histoire_show', {'id': notre_histoire.id}) }}">show</a>
+                    <a href="{{ path('app_notre_histoire_edit', {'id': notre_histoire.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_notre_histoire_new') }}">Create new</a>
+{% endblock %}

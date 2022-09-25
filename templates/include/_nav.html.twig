@@ -1,0 +1,73 @@
+<!--images en têtes de pages -->
+
+
+<!--barre de navigation -->
+	<html>
+		<head>
+			<title>
+		Drop-down Menu
+	</title>
+
+
+	</head>
+		<body>
+			<div class="menu-bar"> <img src="..\..\..\images\logo.jpg" height="100px" width="100px">
+
+
+			<ul>
+				<li class="accueil">
+					<a href="{{ path ('app_main')}}">Accueil</a>
+					<i class="fa fa-home" aria-hidden="true"></i>
+				</li>
+				<li>
+					<a href="#">Nous connaître</a>
+					<i class="fa fa-hand-peace" aria-hidden="true"></i>
+
+
+					<div class="sub-menu-1">
+						<ul>
+							<li>
+								<a href="{{ path ('app_notre_histoire_index')}}">Notre histoire</a>
+								<i class="fa fa-book" aria-hidden="true"></i>
+							</li>
+							<li>
+								<a href="{{ path ('app_devenir_membre_index')}}">Devenir Membre</a>
+								<i class="fa fa-users" aria-hidden="true"></i>
+
+
+							</li>
+
+						</ul>
+					</div>
+
+				</li>
+				<li>
+					<a href="#">Nos Evenements</a>
+					<i class="fa fa-calendar" aria-hidden="true"></i>
+
+				</li>
+				<li>
+					<a href="#">Projets</a>
+					<i class="fa fa-cogs" aria-hidden="true"></i>
+
+					<div class="sub-menu-1">
+						<ul>
+
+							<li><ahref="{{path('app_mali')}}">Mali</a></li>
+							<li><ahref="{{path('app_mali')}}">Mali</a></li>
+
+						</ul>
+
+					</div>
+				</li>
+				<li>
+					<a href="{{ path ('app_don_controlller')}}">Dons</a>
+					<i class="fa fa-heartbeat" aria-hidden="true"></i>
+
+				</li>
+
+
+			</ul>
+		</div>
+	</body>
+</html>

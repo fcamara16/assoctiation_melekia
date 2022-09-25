@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Maraude{% endblock %}
+
+{% block body %}
+    <h1>Edit Maraude</h1>
+
+    {{ include('maraude/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_maraude_index') }}">back to list</a>
+
+    {{ include('maraude/_delete_form.html.twig') }}
+{% endblock %}

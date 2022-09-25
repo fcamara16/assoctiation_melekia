@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Maraude{% endblock %}
+
+{% block body %}
+    <h1>Create new Maraude</h1>
+
+    {{ include('maraude/_form.html.twig') }}
+
+    <a href="{{ path('app_maraude_index') }}">back to list</a>
+{% endblock %}
